@@ -1,0 +1,25 @@
+{
+  "name": "anml",
+  "version": "0.1.0",
+  "description": "scientific and common names of animals library",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdrainxv/anml.git"
+  },
+  "keywords": [
+    "animals",
+    "scientic",
+    "common",
+    "names"
+  ],
+  "author": "charles drani <charlesdrani@gmail.com> (https://github.com/cdrainxv)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdrainxv/anml/issues"
+  },
+  "homepage": "https://github.com/cdrainxv/anml#readme"
+}
