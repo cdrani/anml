@@ -4,25 +4,37 @@
   "description": "scientific and common names of animals library",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "test": "mocha src/index.test.js",
+    "test:watch": "npm t -- --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdrainxv/anml.git"
   },
-  "keywords": ["animals", "scientic", "common", "names"],
-  "author":
-    "charles drani <charlesdrani@gmail.com> (https://github.com/cdrainxv)",
+  "keywords": [
+    "animals",
+    "scientic",
+    "common",
+    "names"
+  ],
+  "author": "charles drani <charlesdrani@gmail.com> (https://github.com/cdrainxv)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cdrainxv/anml/issues"
   },
   "homepage": "https://github.com/cdrainxv/anml#readme",
+  "dependencies": {
+    "unique-random": "1.0.0"
+  },
   "devDependencies": {
     "babel-eslint": "8.0.2",
+    "chai": "4.1.2",
+    "chai-fuzzy": "1.6.1",
     "eslint": "4.12.0",
     "eslint-config-prettier": "2.9.0",
     "eslint-plugin-prettier": "2.3.1",
+    "mocha": "4.0.1",
     "prettier": "1.8.2",
     "prettier-eslint": "8.2.2"
   }

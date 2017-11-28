@@ -1,11 +1,7 @@
-'use strict'
-
-// var uniqueRandomArray = require('uniqueRandomArray')
-
-var anml = require('./anml.json')
+const { getAll, getRandom, getCommon, getScientific } = require('./api')
 
 module.exports = {
-  all: anml,
+  all: getAll(),
   random: getRandom(),
   common: getCommon(name),
   scientific: getScientific(name)
