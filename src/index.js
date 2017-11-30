@@ -1,4 +1,4 @@
-const { getAll, getRandom, getCommon, getScientific } = require('./api')
+const { getAll, getRandom, getCommon, getScientific } = require(`./api`)
 
 module.exports = {
   all: getAll(),

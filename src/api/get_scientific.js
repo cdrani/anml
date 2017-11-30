@@ -1,7 +1,8 @@
-var anml = require('../anml.json')
+const anml = require(`../anml.json`)
 
-module.exports = function(name) {
-  if (Object.keys(anml).includes(name)) {
-    return anml[name]
+module.exports = name => {
+  if (!Object.keys(anml).includes(name)) {
+    throw new Error(`Not available in library.`)
   }
+  return anml[name]
 }

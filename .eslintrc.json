@@ -1,0 +1,33 @@
+{
+  "plugins": ["prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "parser": "babylon"
+      }
+    ],
+    "no-var": "error",
+    "prefer-const": "error",
+    "curly": ["error", "all"],
+    "eqeqeq": "warn",
+    "quotes": ["error", "backtick"],
+    "no-confusing-arrow": "error"
+  },
+  "extends": ["eslint:recommended", "prettier"]
+}
