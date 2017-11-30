@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src",
+    "lint:fix": "npm run lint --fix",
     "test": "mocha src/index.test.js",
     "test:watch": "npm t -- --watch"
   },
