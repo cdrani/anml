@@ -1,3 +1,3 @@
-var anml = require(`../anml.json`);
+const anml = require(`../anml.json`)
 
-module.exports = name => Object.keys(anml).find(key => anml[key] === name);
+module.exports = name => Object.keys(anml).find(key => anml[key] === name)

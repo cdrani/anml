@@ -41,13 +41,11 @@ describe(`getScientific`, () => {
 
 describe(`getRandomName`, () => {
   it(`should return a random common name if argument is "common"`, () => {
-    expect(getRandomName(`common`)).to.be.a(`string`)
     expect(anml).to.have.property(getRandomName(`common`))
   })
 
   it(`should return a random scientific name if argument is "scientific"`, () => {
-    expect(getRandomName(`scientific`)).to.be.a(`string`)
-    expect(anml).containOneLike(getRandomName(`scientific`))
+    expect(getRandomName(`scientific`)).to.satisfy(val => !getCommon(val))
   })
 
   it(`should return a random common or scientific name if argument is not provided`, () => {

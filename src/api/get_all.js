@@ -1,5 +1,3 @@
-const anml = require(`../anml.json`);
+const anml = require(`../anml.json`)
 
-module.exports = function() {
-  return anml;
-};
+module.exports = () => anml
