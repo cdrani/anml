@@ -4,6 +4,7 @@
   "description": "scientific and common names of animals library",
   "main": "src/index.js",
   "scripts": {
+    "build": "babel --out-dir dist src",
     "eslint-check":
       "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "prettier-eslint src/**/*.js --write",
@@ -27,6 +28,8 @@
     "unique-random": "1.0.0"
   },
   "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
     "chai": "4.1.2",
     "chai-fuzzy": "1.6.1",
     "eslint": "4.12.1",
@@ -48,5 +51,8 @@
     "statements": 100,
     "reporter": ["text", "lcov"],
     "include": ["src"]
+  },
+  "babel": {
+    "presets": ["env"]
   }
 }
