@@ -3,4 +3,5 @@ node_modules
 *swo
 *.swp
 .nyc_output/
+coverage/
 package-lock.json
