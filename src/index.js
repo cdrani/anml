@@ -1,8 +1,8 @@
-const { getAll, getRandom, getCommon, getScientific } = require(`./api`)
+const { getAll, getRandomName, getCommon, getScientific } = require(`./api`)
 
 module.exports = {
   all: getAll(),
-  random: getRandom(),
-  common: getCommon(name),
-  scientific: getScientific(name)
+  random: type => getRandomName(type),
+  common: name => getCommon(name),
+  scientific: name => getScientific(name)
 }

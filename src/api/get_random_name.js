@@ -1,7 +1,7 @@
 const uniqueRandom = require(`unique-random`)
 
-const getCommon = require(`./get_common.js`)
 const anml = require(`../anml.json`)
+const getCommon = require(`./get_common.js`)
 
 const getCommonOrScientific = () => {
   const num = uniqueRandom(0, 1)()
@@ -13,13 +13,12 @@ const keyOrValue = typeOfName => {
   const row = uniqueRandom(0, libraryLength)()
 
   return typeOfName === `scientific`
-    ? anml[Object.keys(anml)[row]]
+    ? anml[getCommon(anml[Object.keys(anml)[row]])]
     : getCommon(anml[Object.keys(anml)[row]])
 }
 
-module.exports = () => {
-  const type = Array.from(arguments)
-  switch (type[0]) {
+module.exports = (type = ``) => {
+  switch (type) {
     case `common`: {
       return keyOrValue(`common`)
     }
@@ -29,7 +28,7 @@ module.exports = () => {
     }
 
     default: {
-      return keyOrValue(getCommonOrScientific)
+      return keyOrValue(getCommonOrScientific())
     }
   }
 }

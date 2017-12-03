@@ -45,7 +45,7 @@ describe(`getRandomName`, () => {
   })
 
   it(`should return a random scientific name if argument is "scientific"`, () => {
-    expect(getRandomName(`scientific`)).to.satisfy(val => !getCommon(val))
+    expect(getRandomName(`scientific`)).to.satisfy(val => getCommon(val))
   })
 
   it(`should return a random common or scientific name if argument is not provided`, () => {

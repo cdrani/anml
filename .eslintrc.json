@@ -3,10 +3,11 @@
   "env": {
     "browser": true,
     "node": true,
-    "mocha": true
+    "mocha": true,
+    "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 2017,
+    "ecmaVersion": 6,
     "sourceType": "module",
     "ecmaFeatures": {
       "impliedStrict": true
@@ -26,7 +27,7 @@
     "prefer-const": "error",
     "curly": ["error", "all"],
     "eqeqeq": "warn",
-    "quotes": ["error", "backtick"],
+    "quotes": ["error", "backtick", { "avoidEscape": true }],
     "no-confusing-arrow": "error"
   },
   "extends": ["eslint:recommended", "prettier"]

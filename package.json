@@ -4,9 +4,9 @@
   "description": "scientific and common names of animals library",
   "main": "src/index.js",
   "scripts": {
-    "build": "babel --out-dir dist src",
-    "eslint-check":
-      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "prebuild": "rimraf dist",
+    "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "prettier-eslint src/**/*.js --write",
     "test": "nyc mocha src/index.test.js",
     "test:watch": "npm t -- --watch",
@@ -17,7 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/cdrainxv/anml.git"
   },
-  "keywords": ["animals", "scientic", "common", "names"],
+  "keywords": [
+    "animals",
+    "scientic",
+    "common",
+    "names"
+  ],
   "author": "cdrani (https://github.com/cdrainxv)",
   "license": "MIT",
   "bugs": {
@@ -41,7 +46,8 @@
     "nyc": "11.3.0",
     "prettier": "1.8.2",
     "prettier-eslint": "8.2.2",
-    "prettier-eslint-cli": "4.4.0"
+    "prettier-eslint-cli": "4.4.0",
+    "rimraf": "2.6.2"
   },
   "nyc": {
     "check-coverage": true,
@@ -49,10 +55,17 @@
     "functions": 100,
     "lines": 100,
     "statements": 100,
-    "reporter": ["text", "lcov"],
-    "include": ["src"]
+    "reporter": [
+      "text",
+      "lcov"
+    ],
+    "include": [
+      "src"
+    ]
   },
   "babel": {
-    "presets": ["env"]
+    "presets": [
+      "env"
+    ]
   }
 }
