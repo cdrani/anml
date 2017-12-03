@@ -4,22 +4,19 @@
   "description": "scientific and common names of animals library",
   "main": "src/index.js",
   "scripts": {
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "prettier-eslint src/**/*.js --write",
-    "test": "mocha src/index.test.js",
+    "test": "nyc mocha src/index.test.js",
     "test:watch": "npm t -- --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cdrainxv/anml.git"
   },
-  "keywords": [
-    "animals",
-    "scientic",
-    "common",
-    "names"
-  ],
-  "author": "charles drani <charlesdrani@gmail.com> (https://github.com/cdrainxv)",
+  "keywords": ["animals", "scientic", "common", "names"],
+  "author":
+    "charles drani <charlesdrani@gmail.com> (https://github.com/cdrainxv)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cdrainxv/anml/issues"
@@ -38,5 +35,12 @@
     "prettier": "1.8.2",
     "prettier-eslint": "8.2.2",
     "prettier-eslint-cli": "4.4.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100,
+    "statements": 100
   }
 }
