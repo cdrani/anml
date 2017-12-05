@@ -2,33 +2,20 @@
   "name": "anml",
   "version": "0.1.0",
   "description": "scientific and common names of animals library",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "prettier-eslint src/**/*.js --write",
     "test": "nyc mocha src/index.test.js",
     "test:watch": "npm t -- --watch",
     "validate": "npm-run-all --parallel lint test build",
     "precommit": "npm run validate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cdrainxv/anml.git"
-  },
-  "keywords": [
-    "animals",
-    "scientic",
-    "common",
-    "names"
-  ],
-  "author": "cdrani (https://github.com/cdrainxv)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cdrainxv/anml/issues"
-  },
-  "homepage": "https://github.com/cdrainxv/anml#readme",
+  "keywords": ["animals", "scientic", "common", "names"],
+  "files": ["dist"],
   "dependencies": {
     "unique-random": "1.0.0"
   },
@@ -55,17 +42,20 @@
     "functions": 100,
     "lines": 100,
     "statements": 100,
-    "reporter": [
-      "text",
-      "lcov"
-    ],
-    "include": [
-      "src"
-    ]
+    "reporter": ["text", "lcov"],
+    "include": ["src"]
   },
   "babel": {
-    "presets": [
-      "env"
-    ]
-  }
+    "presets": ["env"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdrainxv/anml.git"
+  },
+  "author": "cdrani (https://github.com/cdrainxv)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdrainxv/anml/issues"
+  },
+  "homepage": "https://github.com/cdrainxv/anml#readme"
 }

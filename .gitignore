@@ -1,7 +1,8 @@
 node_modules
-*~
-*swo
-*.swp
+.*~
+*/**/*~
+*/**/*swo
+*/**/*.swp
 dist/
 .nyc_output/
 coverage/
