@@ -10,7 +10,7 @@
     "lint": "prettier-eslint src/**/*.js --write",
     "test": "nyc mocha src/index.test.js",
     "test:watch": "npm t -- --watch",
-    "validate": "npm-run-all --parallel lint test",
+    "validate": "npm-run-all --parallel lint test build",
     "precommit": "npm run validate"
   },
   "repository": {
