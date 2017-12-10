@@ -1,4 +1,4 @@
-;('use strict')
+'use strict'
 
 import chai, { expect } from 'chai'
 import Fuzzy from 'chai-fuzzy'
