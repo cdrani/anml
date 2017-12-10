@@ -1,4 +1,4 @@
-const { getAll, getRandomName, getCommon, getScientific } = require(`./api`)
+import { getAll, getCommon, getScientific, getRandomName } from './api'
 
 module.exports = {
   all: getAll(),

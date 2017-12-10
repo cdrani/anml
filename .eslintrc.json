@@ -27,7 +27,7 @@
     "prefer-const": "error",
     "curly": ["error", "all"],
     "eqeqeq": "warn",
-    "quotes": ["error", "backtick", { "avoidEscape": true }],
+    "quotes": ["error", "single", { "avoidEscape": true }],
     "no-confusing-arrow": "error"
   },
   "extends": ["eslint:recommended", "prettier"]

@@ -1,7 +1,7 @@
-const getAll = require(`./get_all`)
-const getCommon = require(`./get_common`)
-const getScientific = require(`./get_scientific`)
-const getRandomName = require(`./get_random_name`)
+import getAll from './get_all'
+import getCommon from './get_common'
+import getScientific from './get_scientific'
+import getRandomName from './get_random_name'
 
 module.exports = {
   getAll,

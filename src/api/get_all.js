@@ -1,3 +1,3 @@
-const anml = require(`../anml.json`)
+import anml from '../anml.json'
 
 module.exports = () => anml
