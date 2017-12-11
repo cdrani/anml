@@ -17,6 +17,7 @@
     "report-coverage": "cat ./coverage/lcov.info | codecov",
     "validate": "npm-run-all --parallel lint test build",
     "precommit": "npm run validate",
+    "commit": "commit",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "semantic-release":
       "semantic-release pre && npm publish && semantic-release post"
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@commitlint/cli": "5.2.5",
     "@commitlint/config-conventional": "5.2.3",
+    "@commitlint/prompt-cli": "5.2.5",
     "babel-cli": "6.26.0",
     "babel-loader": "7.1.2",
     "babel-plugin-istanbul": "4.1.5",
