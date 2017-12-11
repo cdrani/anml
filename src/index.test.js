@@ -2,13 +2,15 @@
 
 import chai, { expect } from 'chai'
 import Fuzzy from 'chai-fuzzy'
+import entries from 'core-js/library/fn/object/entries'
+
 chai.use(Fuzzy)
 
 import anml from './anml.json'
 import { getAll, getCommon, getScientific, getRandomName } from './api'
 
 const isString = obj => {
-  for (const [key, value] of Object.entries(obj)) {
+  for (const [key, value] of entries(obj)) {
     return typeof value === 'string' && typeof key === 'string'
   }
 }

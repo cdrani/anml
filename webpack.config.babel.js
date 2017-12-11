@@ -1,10 +1,9 @@
-import 'babel-polyfill'
 import { join } from 'path'
 
 const include = join(__dirname, 'src')
 
 export default {
-  entry: ['babel-polyfill', './src/index'],
+  entry: './src/index',
   output: {
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',

@@ -1,5 +1,3 @@
-import 'babel-polyfill'
-
 import { getAll, getCommon, getScientific, getRandomName } from './api'
 
 module.exports = {
