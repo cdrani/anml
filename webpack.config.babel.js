@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import { join } from 'path'
 
 const include = join(__dirname, 'src')

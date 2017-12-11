@@ -9,22 +9,16 @@
     "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src",
     "build:umd": "webpack --output-filename index.umd.js",
     "build:umd.min": "webpack --output-filename index.umd.min.js",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "prettier-eslint src/**/*.js --write",
     "test": "cross-env NODE_ENV=test nyc mocha src/index.test.js",
     "test:watch": "npm t -- --watch",
     "validate": "npm-run-all --parallel lint test build",
     "precommit": "npm run validate"
   },
-  "keywords": [
-    "animals",
-    "scientic",
-    "common",
-    "names"
-  ],
-  "files": [
-    "dist"
-  ],
+  "keywords": ["animals", "scientic", "common", "names"],
+  "files": ["dist"],
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "unique-random": "1.0.0"
@@ -58,28 +52,17 @@
     "functions": 100,
     "lines": 100,
     "statements": 100,
-    "reporter": [
-      "text",
-      "lcov"
-    ],
+    "reporter": ["text", "lcov"],
     "instrument": false,
     "sourceMap": false,
-    "require": [
-      "babel-register"
-    ],
-    "include": [
-      "src"
-    ]
+    "require": ["babel-register"],
+    "include": ["src"]
   },
   "babel": {
-    "presets": [
-      "env"
-    ],
+    "presets": ["env"],
     "env": {
       "test": {
-        "plugins": [
-          "babel-plugin-istanbul"
-        ]
+        "plugins": ["babel-plugin-istanbul"]
       }
     }
   },
